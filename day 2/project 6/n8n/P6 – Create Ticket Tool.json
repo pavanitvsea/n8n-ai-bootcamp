@@ -1,0 +1,148 @@
+{
+  "name": "P6 – Create Ticket Tool",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "267dcef0-9799-47ff-b11a-dca92d81f83b",
+              "name": "ID",
+              "value": "={{ $now.ts.toString(36).toUpperCase() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "35627a5c-17de-4315-ae69-bda2ab11e175",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "tobiaszwingmann-demo",
+          "mode": "list",
+          "cachedResultName": "tobiaszwingmann-demo",
+          "cachedResultUrl": "https://github.com/tobiaszwingmann-demo"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "n8n-ai-bootcamp",
+          "mode": "list",
+          "cachedResultName": "n8n-ai-bootcamp",
+          "cachedResultUrl": "https://github.com/tobiaszwingmann-demo/n8n-ai-bootcamp"
+        },
+        "filePath": "=project 4/tickets/{{ $json.ID }}.txt",
+        "fileContent": "=User Name: {{ $('When Executed by Another Workflow').item.json['User Name'] }}\n\nSubmitted: {{ $now }}\n\nDescription:\n{{ $('When Executed by Another Workflow').item.json['Issue Description'] }}\n\nStatus: {{ $('When Executed by Another Workflow').item.json.Status }}\nPrio: {{ $('When Executed by Another Workflow').item.json.Prio }}",
+        "commitMessage": "new ticket"
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "9369d4f4-ca87-4056-b675-7ec6a5cc050b",
+      "name": "Create a file",
+      "webhookId": "f4db0966-dd9d-4198-8668-c56762934b2c",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "rqkMAdMVwbOGDQB4",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "User Name"
+            },
+            {
+              "name": "Issue Description"
+            },
+            {
+              "name": "Status"
+            },
+            {
+              "name": "Prio"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "59d8c663-b905-4824-8769-bf6a0b5c4c6d",
+      "name": "When Executed by Another Workflow"
+    }
+  ],
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "User Name": "Tobias",
+          "Issue Description": "My laptop fell down and is broken now",
+          "Status": "Open",
+          "Prio": "Urgent"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Create a file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b751aeef-a231-43da-bc27-55c7a96367e7",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "94e1edcc34a91a151fc2ec1b99597068a304e37fdb946fc806f00f97776fce3a"
+  },
+  "id": "3Ck4ec4LPViTXgfy",
+  "tags": [
+    {
+      "createdAt": "2025-11-01T20:01:49.551Z",
+      "updatedAt": "2025-11-01T20:01:49.551Z",
+      "id": "t5Xu6If84iT9d4bw",
+      "name": "O'Reilly n8n"
+    }
+  ]
+}
