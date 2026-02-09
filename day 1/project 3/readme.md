@@ -1,4 +1,4 @@
-# P2 – Build a simple AI-powered text classifier
+# P3 – Build a simple AI-powered text classifier
 
 **Tip:** Start by copying the workflow from P1 and then modify it as described below.
 
@@ -144,7 +144,7 @@ Respond **only** with one of the following labels:
 | **Authentication** | oAuth2                                                                                                                                                                                                                                           |
 | **Resource**          | File                                                                                                                                                                                                                                          |
 | **Operation**     | Create                                                    |
-| **File Path**      | `project 2/tickets/{{ $('Edit Fields').item.json.ID }}.txt`                                                                                                                                                                                      |
+| **File Path**      | `day 1/project 3/tickets/{{ $('Edit Fields').item.json.ID }}.txt`                                                                                                                                                                                      |
 | **Commit Message** | new ticket                                                                                                                                                                                                                                       |
 
 **File Content**
