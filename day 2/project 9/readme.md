@@ -110,20 +110,51 @@ Activity Log:
 ---
 
 ### Create Ticket
-
 **Type:** Tool Workflow
 
-Calls: **P9 – Create Ticket Tool**
+#### Description
+```
+Call this tool to create a new ticket. Status can be "Open" or "Closed". Prio can be "Urgent" or "Not Urgent".
+```
+#### Source
+```
+Database
+```
 
-Inputs:
+#### Workflow
+```
+From list: P9 - Create Ticket Tool
+```
 
-| Field             | Description         |
-| ----------------- | ------------------- |
-| User Name         | Name of user        |
-| Issue Description | Ticket description  |
-| Status            | Open / Closed       |
-| Prio              | Urgent / Not Urgent |
+#### Workflow Inputs
 
+##### User Name
+*Defined automatically by the model*
+**Description**
+```
+Name of the user. Required to follow up later on.
+```
+
+##### Issue Description
+*Defined automatically by the model*
+**Description**
+```
+Description of the problem. Required.
+```
+
+##### Status
+*Defined automatically by the model*
+**Description**
+```
+Current status of the ticket. Required. Allowed values: "Open", "Closed"
+```
+
+##### Prio
+*Defined automatically by the model*
+**Description**
+```
+Time criticality of the ticket. Required. Allowed values: "Urgent", "Not Urgent"
+```
 ---
 
 # 2. P9 – Create Ticket Tool
