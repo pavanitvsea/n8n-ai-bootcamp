@@ -6,12 +6,13 @@
 
 ### 1. Create New Workflow
 - n8n home --> New workflow
+- Name: `P7 - Simple AI Agent`
 
 ### 2. Add `AI Agent` node
-
-**Source**: Chat Connected Chat Trigger Node
-
-**System Message**
+- New node `AI Agent`
+Parameters:
+- **Source**: Chat Connected Chat Trigger Node
+- **System Message**
 ```
 ### **Role**
 
@@ -82,7 +83,6 @@ You can:
 ```
 
 **Settings**
-
 - Retry On Fail: `On`
 - Max. Tries: `3`
 
