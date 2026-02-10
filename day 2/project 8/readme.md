@@ -150,7 +150,7 @@ Options
 - Try different search queries and test the result
 
 ### 7. Publish
-- Everything work?
+- Everything works?
 - Click **Publish** to publish your workflow
 
 ---
@@ -160,8 +160,8 @@ Options
 Let's give your AI Agent access to the custom knowledge retrieval tool!
 
 ### 1. Duplicate or Copy the workflow from P7
-- **Option A**: n8n home --> Duplicate `Simple AI Agent` Workflow
-- **Option B:** n8n home --> New Workflow --> Copy from our [Github repo](https://github.com/tobiaszwingmann/n8n-ai-bootcamp/blob/main/day%202/project%207/n8n/P7%20%E2%80%93%20Simple%20Agent.json)
+- **Option A**: n8n home --> Duplicate `P7 - Simple AI Agent` Workflow
+- **Option B:** n8n home --> New Workflow --> Import from our [Github repo](https://github.com/tobiaszwingmann/n8n-ai-bootcamp/blob/main/day%202/project%207/n8n/P7%20%E2%80%93%20Simple%20Agent.json)
 
 ### 2. Update Agent Instructions
 - Open the **AI Agent Node**
