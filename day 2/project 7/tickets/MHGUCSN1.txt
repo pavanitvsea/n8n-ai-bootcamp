@@ -1,0 +1,14 @@
+User Name: Tobias
+
+Submitted: 2025-11-01T23:15:54.110+01:00
+
+Description:
+User Tobias cannot sign into Windows on company laptop. Device is domain-joined. User reports no access to desktop and requests immediate assistance. Unable to authenticate at login screen; needs urgent account or device support.
+
+Status: Open
+Prio: Urgent
+
+Activity Log:
+2025-11-01T23:15:54.110+01:00 - Ticket created (Urgent). Escalated to human IT technician for account/machine support.
+2025-11-01T23:40:00.000+01:00 - User reported: "I can log in now! it works". User regained access to Windows. No further action required at this time. Ticket closed.
+2025-11-02T09:00:00.000+01:00 - User reported the issue has reoccurred. Reopening ticket for technician review.
