@@ -5,5 +5,9 @@ Submitted: 2026-02-09T22:03:19.074+01:00
 Description:
 User Tobias reports that their laptop fell down. Potential hardware damage needs to be assessed.
 
-Status: Open
+Status: Closed
 Prio: Urgent
+
+Activity Log:
+2026-02-09T22:03:19.074+01:00 - Ticket created (Urgent). Issue reported related to possible hardware damage.
+2026-02-09T22:10:00.000+01:00 - User confirmed that the laptop is fine and no further action is required. Ticket closed.
